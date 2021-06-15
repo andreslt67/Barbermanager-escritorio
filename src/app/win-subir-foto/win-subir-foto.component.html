@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Subir Foto</h1>
+<div mat-dialog-content>
+    <form [formGroup]="formLogin">
+        <p>
+            <input type="file" formControlName='img' placeholder="Suba una imagen" (change)="fileEvent($event)">
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cerrar</button>
+    <button mat-button [disabled]="formLogin.controls.img.invalid" (click)="subirFoto()">Subir</button>
+</div>

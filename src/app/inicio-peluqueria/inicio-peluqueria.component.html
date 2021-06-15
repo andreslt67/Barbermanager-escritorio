@@ -1,0 +1,37 @@
+<mat-card class="divInicio">
+    <mat-card-header>
+        <div class="inicioHeader">
+            <div class="imagen"></div>
+        </div>
+        <div class="inicioHeader">
+            <p><strong>BarberManager</strong></p>
+        </div>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+        <form [formGroup]="formLogin">
+            <p>
+                <mat-form-field appearance="fill" class="formInputText">
+                    <mat-label>Usuario del dueño</mat-label>
+                    <input matInput type="text" formControlName='user' placeholder="usuario23">
+                    <mat-error *ngIf="formLogin.controls.user.invalid && formLogin.controls.user.dirty">Usuario no válido</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="fill" class="formInput">
+                    <mat-label>Credenciales Peluqueria</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" formControlName='password' placeholder="*********">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                    <mat-error *ngIf="formLogin.controls.password.invalid && formLogin.controls.password.dirty">Contraseña no válida</mat-error>
+                </mat-form-field>
+            </p>
+        </form>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-actions>
+        <button mat-raised-button [disabled]="formLogin.controls.user.invalid || formLogin.controls.password.invalid" (click)="acceder()">Acceder</button>
+        <button mat-raised-button (click)="toRegistro()">Crear Peluquería</button>
+    </mat-card-actions>
+</mat-card>

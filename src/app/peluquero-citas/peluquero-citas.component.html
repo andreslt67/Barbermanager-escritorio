@@ -1,0 +1,40 @@
+<div class="tituloContent">
+    <p>Tus citas</p>
+</div>
+<mat-nav-list>
+    <div class="divBtnResena">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Introduzca una fecha</mat-label>
+            <input matInput [matDatepicker]="picker" [matDatepickerFilter]="myFilter" [min]="minDate" (dateInput)="addEvent($event)">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker touchUi #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+    <div *ngIf="citas.length > 0">
+        <mat-card  *ngFor="let cita of citas" class="listaPelu">
+            <mat-card-header>
+                <mat-card-header>
+                    <mat-card-title>
+                        Cita:
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>Fecha: {{cita.fecha | date:"MMM dd, y"}}</p>
+                    <p>Hora: {{cita.fecha | date:"hh:mm a"}}</p>
+                    <p *ngIf="cita.estado">Reservada por: {{cita.cliente}}</p>
+                    <p *ngIf="cita.estado">Servicio: {{cita.servicio}}</p>
+                    <p *ngIf="cita.estado">Precio: {{cita.precio}}€</p>
+                </mat-card-content>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-actions>
+                <button mat-raised-button (click)="cancelarCita(cita.idcita)">
+                    Cancelar cita
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    <div *ngIf="citas.length == 0">
+        <p class="sinResultados">No se encontraron citas.</p>
+    </div>
+</mat-nav-list>

@@ -1,0 +1,72 @@
+<div class="tituloContent">
+    <p>Tu Perfil</p>
+</div>
+<form [formGroup]="formLogin" >
+    <div class="expansionPanelContent">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header class="expansionPanelContent">
+                <mat-panel-title class="expansionHeaderContent">
+                    <mat-icon>person</mat-icon>
+                    Usuario
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-form-field appearance="standard" class="formInput">
+                <mat-label>Usuario</mat-label>
+                <input matInput type="text" formControlName='user' [(ngModel)]="peluquero.usuario">
+                <mat-error *ngIf="formLogin.controls.user.invalid && formLogin.controls.user.dirty">Usuario no válido</mat-error>
+            </mat-form-field>
+            <button mat-raised-button [disabled]="formLogin.controls.user.invalid || formLogin.controls.password.invalid || formLogin.controls.email.invalid || formLogin.controls.name.invalid" (click)="updatePeluquero()">Actualizar</button>
+        </mat-expansion-panel>
+    </div>
+    <div class="expansionPanelContent">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header class="expansionPanelContent">
+                <mat-panel-title class="expansionHeaderContent">
+                    <mat-icon>vpn_key</mat-icon>
+                    Contraseña
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-form-field appearance="standard" class="formInput">
+                <mat-label>Contraseña</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName='password' [(ngModel)]="peluquero.clave">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="formLogin.controls.password.invalid && formLogin.controls.password.dirty">Contraseña no válida</mat-error>
+            </mat-form-field>
+            <button mat-raised-button [disabled]="formLogin.controls.user.invalid || formLogin.controls.password.invalid || formLogin.controls.email.invalid || formLogin.controls.name.invalid" (click)="updatePeluquero()">Actualizar</button>
+        </mat-expansion-panel>
+    </div>
+    <div class="expansionPanelContent">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header class="expansionPanelContent">
+                <mat-panel-title class="expansionHeaderContent">
+                    <mat-icon>email</mat-icon>
+                    Email
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-form-field appearance="standard" class="formInput">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" formControlName='email' [(ngModel)]="peluquero.email">
+                <mat-error *ngIf="formLogin.controls.email.invalid && formLogin.controls.email.dirty">Email no válido</mat-error>
+            </mat-form-field>
+            <button mat-raised-button [disabled]="formLogin.controls.user.invalid || formLogin.controls.password.invalid || formLogin.controls.email.invalid || formLogin.controls.name.invalid" (click)="updatePeluquero()">Actualizar</button>
+        </mat-expansion-panel>
+    </div>
+    <div class="expansionPanelContent">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header class="expansionPanelContent">
+                <mat-panel-title class="expansionHeaderContent">
+                    <mat-icon>person</mat-icon>
+                    Nombre
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-form-field appearance="standard" class="formInput">
+                <mat-label>Nombre</mat-label>
+                <input matInput type="text" formControlName='name' [(ngModel)]="peluquero.nombre">
+                <mat-error *ngIf="formLogin.controls.name.invalid && formLogin.controls.name.dirty">Nombre no válido</mat-error>
+            </mat-form-field>
+            <button mat-raised-button [disabled]="formLogin.controls.user.invalid || formLogin.controls.password.invalid || formLogin.controls.email.invalid || formLogin.controls.name.invalid" (click)="updatePeluquero()">Actualizar</button>
+        </mat-expansion-panel>
+    </div>
+</form>

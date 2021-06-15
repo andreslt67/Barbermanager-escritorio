@@ -1,0 +1,18 @@
+<div class="tituloContent">
+    <p>Fotos Subidas</p>
+</div>
+<div class="divBtnResena">
+    <button mat-raised-button class="citaLista" (click)="toSubirFotos()">
+        Añadir Fotos
+    </button>
+</div>
+<div *ngIf="fotos.length > 0">
+    <mat-nav-list class="fotoContainer">
+        <div *ngFor="let foto of fotos">
+            <img src="{{'data:image/png;base64,' + foto.src}}" alt="" class="fotoPelu" (click)="toBorrarFoto(foto.idfoto)">
+        </div>
+    </mat-nav-list>
+</div>
+<div *ngIf="fotos.length == 0">
+    <p class="sinResultados">No hay fotos subidas.</p>
+</div>

@@ -1,0 +1,1124 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>barber-manager-desk documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/vagrant.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">barber-manager-desk documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>ServicioEstablecimientosService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/servicios/servicio-establecimientos.service.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Servicio que administra los datos de establecimientos.</p>
+
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#actualizarEstablecimiento">actualizarEstablecimiento</a>
+                            </li>
+                            <li>
+                                <a href="#auntenticaEstablecimiento">auntenticaEstablecimiento</a>
+                            </li>
+                            <li>
+                                <a href="#getAllPeluqueriasBuscador">getAllPeluqueriasBuscador</a>
+                            </li>
+                            <li>
+                                <a href="#getPeluqueria">getPeluqueria</a>
+                            </li>
+                            <li>
+                                <a href="#getPeluqueriaRequest">getPeluqueriaRequest</a>
+                            </li>
+                            <li>
+                                <a href="#getPeluqueriasFromBuscador">getPeluqueriasFromBuscador</a>
+                            </li>
+                            <li>
+                                <a href="#getPeluquerosOfEstablecimiento">getPeluquerosOfEstablecimiento</a>
+                            </li>
+                            <li>
+                                <a href="#registrarEstablecimiento">registrarEstablecimiento</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/servicios/servicio-establecimientos.service.ts:14</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Metodo constructor del servicio</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Servicio inyectado para controlar las peticiones http.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="actualizarEstablecimiento"></a>
+                    <span class="name">
+                        <b>
+                            actualizarEstablecimiento
+                        </b>
+                        <a href="#actualizarEstablecimiento"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>actualizarEstablecimiento(propietario: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, credencial: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, direccion: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, telefono: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, horaInicio: <a href="https://angular.io/api/common/Time" target="_blank">Time</a>, horaFin: <a href="https://angular.io/api/common/Time" target="_blank">Time</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="120"
+                            class="link-to-prism">src/app/servicios/servicio-establecimientos.service.ts:120</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Actualiza los datos de un establecimiento en la bbdd.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>propietario</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Propietario del establecimiento.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>credencial</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Credencial del establecimiento.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>direccion</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Direccion del establecimiento.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>telefono</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Telefono del establecimiento.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>horaInicio</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/common/Time" target="_blank" >Time</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Hora de apertura del establecimiento.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>horaFin</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/common/Time" target="_blank" >Time</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Hora de cierre del establecimiento.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;EstablecimientoMin&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>el nuevo establecimiento.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="auntenticaEstablecimiento"></a>
+                    <span class="name">
+                        <b>
+                            auntenticaEstablecimiento
+                        </b>
+                        <a href="#auntenticaEstablecimiento"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>auntenticaEstablecimiento(usuario: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, clave: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/app/servicios/servicio-establecimientos.service.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Comprueba los datos del establecimiento enviados al servidor y devuelve un establecimiento.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>usuario</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Propietario del establecimiento.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>clave</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Credencial del establecimiento.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;EstablecimientoMin&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>establecimiento.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllPeluqueriasBuscador"></a>
+                    <span class="name">
+                        <b>
+                            getAllPeluqueriasBuscador
+                        </b>
+                        <a href="#getAllPeluqueriasBuscador"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllPeluqueriasBuscador()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/app/servicios/servicio-establecimientos.service.ts:28</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Obtiene una lista de los establecimientos de la bbdd.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ListaEstablecimientosBuscador&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Lista de establecimientos.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPeluqueria"></a>
+                    <span class="name">
+                        <b>
+                            getPeluqueria
+                        </b>
+                        <a href="#getPeluqueria"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPeluqueria(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/servicios/servicio-establecimientos.service.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Obtiene los datos de un establecimiento.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Id del establecimiento.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/Establecimiento.html" target="_self" >Observable&lt;Establecimiento&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Un establecimiento</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPeluqueriaRequest"></a>
+                    <span class="name">
+                        <b>
+                            getPeluqueriaRequest
+                        </b>
+                        <a href="#getPeluqueriaRequest"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPeluqueriaRequest()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/app/servicios/servicio-establecimientos.service.ts:57</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Obtiene un establecimiento de la bbdd.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/Establecimiento.html" target="_self" >Observable&lt;Establecimiento&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>establecimiento.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPeluqueriasFromBuscador"></a>
+                    <span class="name">
+                        <b>
+                            getPeluqueriasFromBuscador
+                        </b>
+                        <a href="#getPeluqueriasFromBuscador"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPeluqueriasFromBuscador(termino: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/app/servicios/servicio-establecimientos.service.ts:38</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Obtiene una lista de establecimientos según un termino buscado.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>termino</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Termino para buscar establecimientos.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ListaEstablecimientosBuscador&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Lista de establecimientos.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPeluquerosOfEstablecimiento"></a>
+                    <span class="name">
+                        <b>
+                            getPeluquerosOfEstablecimiento
+                        </b>
+                        <a href="#getPeluquerosOfEstablecimiento"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPeluquerosOfEstablecimiento(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="67"
+                            class="link-to-prism">src/app/servicios/servicio-establecimientos.service.ts:67</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Obtiene una lista de peluqueros del establecimiento.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Id del establecimiento.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;ListaPeluqueroBuscador&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Lista de peluqueros.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registrarEstablecimiento"></a>
+                    <span class="name">
+                        <b>
+                            registrarEstablecimiento
+                        </b>
+                        <a href="#registrarEstablecimiento"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>registrarEstablecimiento(propietario: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, credencial: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, direccion: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, telefono: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, horaInicio: <a href="https://angular.io/api/common/Time" target="_blank">Time</a>, horaFin: <a href="https://angular.io/api/common/Time" target="_blank">Time</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">src/app/servicios/servicio-establecimientos.service.ts:97</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Crea un nuevo establecimiento en la bbdd.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>propietario</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Propietario del establecimiento.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>credencial</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Credencial del establecimiento.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>direccion</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Direccion del establecimiento.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>telefono</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Telefono del establecimiento.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>horaInicio</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/common/Time" target="_blank" >Time</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Hora de apertura del establecimiento.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>horaFin</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/common/Time" target="_blank" >Time</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Hora de cierre del establecimiento.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;EstablecimientoMin&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>el nuevo establecimiento.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Time } from &#x27;@angular/common&#x27;;
+import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { Injectable } from &#x27;@angular/core&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { Establecimiento, EstablecimientoMin, ListaEstablecimientosBuscador } from &#x27;../interfaces/establecimiento&#x27;;
+import { ListaPeluqueroBuscador } from &#x27;../interfaces/peluquero&#x27;;
+
+/**
+ * Servicio que administra los datos de establecimientos.
+ */
+@Injectable({
+  providedIn: &#x27;root&#x27;
+})
+export class ServicioEstablecimientosService {
+
+/**
+ * Metodo constructor del servicio
+ *
+ * @param {HttpClient} http  Servicio inyectado para controlar las peticiones http.
+ */
+  constructor(private http: HttpClient) { }
+
+  /**
+ * Obtiene una lista de los establecimientos de la bbdd.
+ *
+ * @returns Lista de establecimientos.
+ */
+  getAllPeluqueriasBuscador(): Observable&lt;ListaEstablecimientosBuscador&gt; {
+    return this.http.get&lt;ListaEstablecimientosBuscador&gt;(&#x27;/establecimiento/all&#x27;)
+  }
+
+/**
+ * Obtiene una lista de establecimientos según un termino buscado.
+ *
+ * @param {string} termino Termino para buscar establecimientos.
+ * @returns Lista de establecimientos.
+ */
+  getPeluqueriasFromBuscador(termino: string): Observable&lt;ListaEstablecimientosBuscador&gt; {
+    return this.http.get&lt;ListaEstablecimientosBuscador&gt;(&#x27;/establecimiento/buscar/&#x27; + termino);
+  }
+
+/**
+ * Obtiene los datos de un establecimiento.
+ *
+ * @param {number} id Id del establecimiento.
+ * @returns Un establecimiento
+ */
+  getPeluqueria(id: number): Observable&lt;Establecimiento&gt; {
+    return this.http.get&lt;Establecimiento&gt;(&#x27;/establecimiento/&#x27; + id);
+  }
+
+/**
+ * Obtiene un establecimiento de la bbdd.
+ *
+ * @returns establecimiento.
+ */
+  getPeluqueriaRequest(): Observable&lt;Establecimiento&gt; {
+    return this.http.get&lt;Establecimiento&gt;(&#x27;/establecimiento&#x27;);
+  }
+
+/**
+ * Obtiene una lista de peluqueros del establecimiento.
+ *
+ * @param {number} id Id del establecimiento.
+ * @returns Lista de peluqueros.
+ */
+  getPeluquerosOfEstablecimiento(id: number): Observable&lt;ListaPeluqueroBuscador&gt;{
+    return this.http.get&lt;ListaPeluqueroBuscador&gt;(&#x27;/establecimiento/peluqueros/&#x27; + id);
+  }
+
+/**
+ * Comprueba los datos del establecimiento enviados al servidor y devuelve un establecimiento.
+ *
+ * @param {string} usuario Propietario del establecimiento.
+ * @param {string} clave Credencial del establecimiento.
+ * @returns establecimiento.
+ */
+  auntenticaEstablecimiento(usuario: string, clave: string): Promise&lt;EstablecimientoMin&gt;{
+    var jsonObject &#x3D; {
+      propietario: usuario,
+      credencial: clave
+    }
+    return this.http.post&lt;EstablecimientoMin&gt;(&#x27;/establecimiento/auntentica&#x27;, jsonObject).toPromise();
+  }
+
+/**
+ * Crea un nuevo establecimiento en la bbdd.
+ *
+ * @param {string} propietario Propietario del establecimiento.
+ * @param {string} credencial Credencial del establecimiento.
+ * @param {string} direccion Direccion del establecimiento.
+ * @param {string} telefono Telefono del establecimiento.
+ * @param {Time} horaInicio Hora de apertura del establecimiento.
+ * @param {Time} horaFin Hora de cierre del establecimiento.
+ * @returns el nuevo establecimiento.
+ */
+  registrarEstablecimiento(propietario: string, credencial: string, direccion: string, telefono: string, horaInicio: Time, horaFin: Time): Promise&lt;EstablecimientoMin&gt;{
+    var jsonObject &#x3D; {
+      credencial: credencial,
+      propietario: propietario,
+      direccion: direccion,
+      telefono: telefono,
+      horaInicio: horaInicio,
+      horaFin: horaFin
+    }
+    return this.http.post&lt;EstablecimientoMin&gt;(&#x27;/establecimiento/registrar&#x27;, jsonObject).toPromise();
+  }
+
+  /**
+ * Actualiza los datos de un establecimiento en la bbdd.
+ *
+ * @param {string} propietario Propietario del establecimiento.
+ * @param {string} credencial Credencial del establecimiento.
+ * @param {string} direccion Direccion del establecimiento.
+ * @param {string} telefono Telefono del establecimiento.
+ * @param {Time} horaInicio Hora de apertura del establecimiento.
+ * @param {Time} horaFin Hora de cierre del establecimiento.
+ * @returns el nuevo establecimiento.
+ */
+  actualizarEstablecimiento(propietario: string, credencial: string, direccion: string, telefono: string, horaInicio: Time, horaFin: Time): Observable&lt;EstablecimientoMin&gt;{
+    var jsonObject &#x3D; {
+      propietario: propietario,
+      credencial: credencial,
+      direccion: direccion,
+      telefono: telefono,
+      horaInicio: horaInicio,
+      horaFin: horaFin
+    }
+    return this.http.post&lt;EstablecimientoMin&gt;(&#x27;/establecimiento/actualizar&#x27;, jsonObject);
+  }
+  
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ServicioEstablecimientosService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

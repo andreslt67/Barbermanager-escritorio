@@ -1,0 +1,40 @@
+<mat-toolbar class="navBar">
+      <button mat-icon-button class="example-icon" (click)="back()" aria-label="Example icon-button with menu icon">
+        <mat-icon>keyboard_backspace</mat-icon>
+      </button>
+    <span>Volver</span>
+</mat-toolbar>
+<div class="divInicio">
+    <mat-card-header>
+        <div class="inicioHeader">
+            <div class="imagen"></div>
+        </div>
+        <div class="inicioHeader">
+            <p><strong>BarberManager</strong></p>
+        </div>
+        <span class="spacer"></span>
+        <div class="divTitleBtn">
+            <button mat-raised-button class="titleBtn" (click)="toPeluqueria()">
+                Ver Peluquería
+            </button>
+            <span class="entreBtn">--</span>
+            <button mat-raised-button class="titleBtn" (click)="openDialogEleccion()">
+                Añadir Peluqueros
+            </button>
+        </div>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+        <h1 class="title"><strong>¿Quién eres?</strong></h1>
+        <div *ngIf="peluqueros.length > 0">
+            <mat-grid-list cols="3">
+                <mat-grid-tile *ngFor="let peluquero of peluqueros">
+                    <app-div-pelu-expansion [peluquero]="peluquero"></app-div-pelu-expansion>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+        <div *ngIf="peluqueros.length == 0">
+            <p class="sinResultados">No se han encontrado peluqueros</p>
+        </div>
+    </mat-card-content>
+</div>

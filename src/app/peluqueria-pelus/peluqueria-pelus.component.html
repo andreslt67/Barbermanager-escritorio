@@ -1,0 +1,20 @@
+<div class="tituloContent">
+    <p>Peluqueros asociados</p>
+</div>
+<div *ngIf="peluqueros.length > 0">
+    <mat-nav-list>
+        <mat-card  *ngFor="let peluquero of peluqueros" class="listaPelu">
+            <mat-card-header>
+                <p><strong>{{peluquero.usuario}}</strong> <br/><br/> {{peluquero.nombre}}</p>
+            </mat-card-header>
+            <mat-card-actions>
+                <button mat-raised-button (click)="eliminarPeluquero(peluquero)">
+                    Eliminar peluquero
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-nav-list>
+</div>
+<div *ngIf="peluqueros.length == 0">
+    <p class="sinResultados">No hay peluqueros asociados</p>
+</div>

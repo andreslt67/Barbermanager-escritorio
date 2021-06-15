@@ -1,0 +1,23 @@
+<div class="tituloContent">
+    <p>Tus Reseñas</p>
+</div>
+<div *ngIf="resenas.length > 0">
+    <mat-card  *ngFor="let resena of resenas" class="listaPelu">
+        <mat-card-header>
+            <mat-card-header>
+                <mat-card-title>
+                    Reseña:
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>De: {{resena.cliente}}</p>
+                <p>{{resena.fecha | date:"MMM dd, y"}}</p>
+                <p>{{resena.contenido}}</p>
+                <p>Valoración: {{resena.valoracion}}/5</p>
+            </mat-card-content>
+        </mat-card-header>
+    </mat-card>
+</div>
+<div *ngIf="resenas.length == 0">
+    <p class="sinResultados">No tienes reseñas.</p>
+</div>

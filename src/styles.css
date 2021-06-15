@@ -1,0 +1,214 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+    background-image: url(./assets/img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imagen {
+    height: 65px;
+    width: 65px;
+    background-image: url(./assets/img/barberLogo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+
+.formInput {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.formInputText{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 30px;
+}
+
+.formInput button{
+    background-color: darkred;
+    color: white;
+}
+
+.divInicio {
+    width: 80%;
+    margin-left: 10%;
+    top: 20%;
+    background-color: white;
+    padding: 20px;
+}
+
+.divInicio button{
+    background-color: darkred;
+    color: white;
+    left: 40%;
+}
+
+.titleExpansion {
+    color: darkred;
+    font-weight: bold;
+}
+
+.expansionPanel {
+    background-color:white;
+}
+
+.expansionPanel button{
+    background-color: darkred;
+    color: white;
+}
+
+.inicioHeader p {
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.snackBar {
+    background-color: darkred;
+    color:white;
+}
+
+.snackBar button {
+    color: white;
+}
+
+.divTitleBtn {
+    margin-top: 10px;
+}
+
+.titleBtn {
+    color: white;
+    background-color: darkred;
+}
+
+.spacer {
+    width: 30%;
+}
+
+.peluCard {
+    background-color: darkred;
+    color: white;
+    width: 300px;
+    margin: 20px;
+    text-align: justify;
+    float: left;
+}
+
+.peluCard button {
+    color: darkred;
+    background-color: white;
+}
+
+.citaLista {
+    background-color: darkred;
+    color: white;
+    width: 300px;
+    text-align: justify;
+}
+
+.citaLista button {
+    color: darkred;
+    background-color: white;
+}
+
+.citaOcupada {
+    background-color: darkslategray;
+    color: white;
+    margin: 20px;
+}
+
+.entreBtn {
+    color: white;
+}
+
+.title {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.sideNav {
+    background-color: darkred;
+    color: white;
+    width: 20%;
+}
+
+.sideContent {
+    height: 570px;
+}
+
+.opcionMenu {
+    font-weight: bolder;
+    color: white;
+}
+
+.tituloContent {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bolder;
+    margin: 40px;
+}
+
+.expansionPanelContent {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.expansionHeaderContent {
+    font-weight: bolder;
+}
+
+.listaPelu {
+    background-color: darkred;
+    color: white;
+    margin: 10px;
+}
+
+.listaPelu button{
+    color:darkred;
+}
+
+.sinResultados {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.divOpcion {
+    background-color: darkred;
+    color: white;
+    font-size: 18px;
+    width: 450px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin: 15px;
+}
+
+.fotoContainer {
+    margin-left: 40px;
+}
+
+.fotoPelu {
+    height: 300px;
+    width: 300px;
+    float: left;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.divBtnResena {
+    margin: 20px;
+}
+
+.navBar {
+    background-color: darkred;
+    color: white;
+    border-bottom-width: 0.25px;
+    border-bottom-color: rgb(107, 0, 0);
+    border-bottom-style: solid;
+    max-height: fit-content;
+}

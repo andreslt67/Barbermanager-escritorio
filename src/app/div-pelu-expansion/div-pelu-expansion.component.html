@@ -1,0 +1,23 @@
+<mat-card class="peluCard">
+    <mat-icon>person</mat-icon>
+    <mat-card-header>
+        <h2><strong>{{peluquero.usuario}}</strong></h2>
+    </mat-card-header>
+    <mat-card-content>
+        <p>{{peluquero.nombre}}</p>
+    </mat-card-content>
+    <mat-expansion-panel class="expansionPanel">
+        <mat-expansion-panel-header>
+            <mat-panel-title class="titleExpansion">
+                Acceder
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <form [formGroup]="formLogin">
+            <mat-form-field appearance="fill" class="formInputExpansion">
+                <mat-label>Contraseña</mat-label>
+                <input matInput type="password" formControlName='clave' placeholder="*******">
+            </mat-form-field>
+            <button mat-raised-button class="expansionPanel" (click)="toPeluquero()">Acceder</button>
+        </form>
+    </mat-expansion-panel>
+</mat-card>

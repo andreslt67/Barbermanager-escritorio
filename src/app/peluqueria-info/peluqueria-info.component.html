@@ -1,0 +1,104 @@
+<div class="tituloContent">
+    <p>Datos de la peluquería</p>
+</div>
+<form [formGroup]="formLogin" >
+    <div class="expansionPanelContent">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header class="expansionPanelContent">
+                <mat-panel-title class="expansionHeaderContent">
+                    <mat-icon>person</mat-icon>
+                    Propietario
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-form-field appearance="standard" class="formInput">
+                <mat-label>Usuario del propietario</mat-label>
+                <input matInput type="text" formControlName='user' [(ngModel)]="peluqueria.propietario">
+                <mat-error *ngIf="formLogin.controls.user.invalid && formLogin.controls.user.dirty">Usuario no válido</mat-error>
+            </mat-form-field>
+            <button mat-raised-button [disabled]="formLogin.controls.user.invalid || formLogin.controls.password.invalid || formLogin.controls.direccion.invalid || formLogin.controls.telefono.invalid || formLogin.controls.horaInicio.invalid || formLogin.controls.horaFin.invalid" (click)="updateEstablecimiento()">Actualizar</button>
+        </mat-expansion-panel>
+    </div>
+    <div class="expansionPanelContent">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header class="expansionPanelContent">
+                <mat-panel-title class="expansionHeaderContent">
+                    <mat-icon>vpn_key</mat-icon>
+                    Credencial
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-form-field appearance="standard" class="formInput">
+                <mat-label>Credencial</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName='password' [(ngModel)]="peluqueria.credencial">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="formLogin.controls.password.invalid && formLogin.controls.password.dirty">Credencial no válida</mat-error>
+            </mat-form-field>
+            <button mat-raised-button [disabled]="formLogin.controls.user.invalid || formLogin.controls.password.invalid || formLogin.controls.direccion.invalid || formLogin.controls.telefono.invalid || formLogin.controls.horaInicio.invalid || formLogin.controls.horaFin.invalid" (click)="updateEstablecimiento()">Actualizar</button>
+        </mat-expansion-panel>
+    </div>
+    <div class="expansionPanelContent">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header class="expansionPanelContent">
+                <mat-panel-title class="expansionHeaderContent">
+                    <mat-icon>location_on</mat-icon>
+                    Dirección
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-form-field appearance="standard" class="formInput">
+                <mat-label>Dirección</mat-label>
+                <input matInput type="text" formControlName='direccion' [(ngModel)]="peluqueria.direccion">
+                <mat-error *ngIf="formLogin.controls.direccion.invalid && formLogin.controls.direccion.dirty">Dirección no válido</mat-error>
+            </mat-form-field>
+            <button mat-raised-button [disabled]="formLogin.controls.user.invalid || formLogin.controls.password.invalid || formLogin.controls.direccion.invalid || formLogin.controls.telefono.invalid || formLogin.controls.horaInicio.invalid || formLogin.controls.horaFin.invalid" (click)="updateEstablecimiento()">Actualizar</button>
+        </mat-expansion-panel>
+    </div>
+    <div class="expansionPanelContent">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header class="expansionPanelContent">
+                <mat-panel-title class="expansionHeaderContent">
+                    <mat-icon>phone</mat-icon>
+                    Teléfono
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-form-field appearance="standard" class="formInput">
+                <mat-label>Teléfono</mat-label>
+                <input matInput type="text" formControlName='telefono' [(ngModel)]="peluqueria.telefono">
+                <mat-error *ngIf="formLogin.controls.telefono.invalid && formLogin.controls.telefono.dirty">Teléfono no válido</mat-error>
+            </mat-form-field>
+            <button mat-raised-button [disabled]="formLogin.controls.user.invalid || formLogin.controls.password.invalid || formLogin.controls.direccion.invalid || formLogin.controls.telefono.invalid || formLogin.controls.horaInicio.invalid || formLogin.controls.horaFin.invalid" (click)="updateEstablecimiento()">Actualizar</button>
+        </mat-expansion-panel>
+    </div>
+    <div class="expansionPanelContent">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header class="expansionPanelContent">
+                <mat-panel-title class="expansionHeaderContent">
+                    <mat-icon>access_time</mat-icon>
+                    Hora de apertura
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-form-field appearance="standard" class="formInput">
+                <mat-label>Hora de apertura</mat-label>
+                <input matInput type="time" formControlName='horaInicio' [(ngModel)]="peluqueria.horaInicio">
+                <mat-error *ngIf="formLogin.controls.horaInicio.invalid && formLogin.controls.horaInicio.dirty">Hora no válida</mat-error>
+            </mat-form-field>
+            <button mat-raised-button [disabled]="formLogin.controls.user.invalid || formLogin.controls.password.invalid || formLogin.controls.direccion.invalid || formLogin.controls.telefono.invalid || formLogin.controls.horaInicio.invalid || formLogin.controls.horaFin.invalid" (click)="updateEstablecimiento()">Actualizar</button>
+        </mat-expansion-panel>
+    </div>
+    <div class="expansionPanelContent">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header class="expansionPanelContent">
+                <mat-panel-title class="expansionHeaderContent">
+                    <mat-icon>access_time</mat-icon>
+                    Hora de cierre
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-form-field appearance="standard" class="formInput">
+                <mat-label>Hora de cierre</mat-label>
+                <input matInput type="time" formControlName='horaFin' [(ngModel)]="peluqueria.horaFin">
+                <mat-error *ngIf="formLogin.controls.horaFin.invalid && formLogin.controls.horaFin.dirty">Hora no válida</mat-error>
+            </mat-form-field>
+            <button mat-raised-button [disabled]="formLogin.controls.user.invalid || formLogin.controls.password.invalid || formLogin.controls.direccion.invalid || formLogin.controls.telefono.invalid || formLogin.controls.horaInicio.invalid || formLogin.controls.horaFin.invalid" (click)="updateEstablecimiento()">Actualizar</button>
+        </mat-expansion-panel>
+    </div>
+</form>

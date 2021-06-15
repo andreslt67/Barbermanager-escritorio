@@ -1,0 +1,31 @@
+<mat-toolbar class="navBar">
+    <button mat-icon-button class="example-icon" (click)="back()" aria-label="Example icon-button with menu icon">
+      <mat-icon>keyboard_backspace</mat-icon>
+    </button>
+  <span>Volver</span>
+</mat-toolbar>
+<mat-sidenav-container class="sideContainer">
+    <mat-sidenav mode="side" opened class="sideNav">
+        <mat-nav-list>
+            <div mat-subheader class="opcionMenu">Menú</div>
+            <mat-list-item (click)="switchPag(0)">
+              <div mat-line class="opcionMenu">Info</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item (click)="switchPag(1)">
+                <div mat-line class="opcionMenu">Peluqueros</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="sideContent">
+            <div *ngIf="opcion == 0">
+                <app-peluqueria-info></app-peluqueria-info>
+            </div>
+            <div *ngIf="opcion == 1">
+                <app-peluqueria-pelus></app-peluqueria-pelus>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
